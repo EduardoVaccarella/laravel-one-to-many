@@ -1,0 +1,40 @@
+.main {
+    background-color: rgba(0, 0, 0, 0.100);
+    margin-top: 10px;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+
+    .card {
+        width: 20%;
+        background-color: rgba(0, 182, 97, 0.493);
+        padding: 10px;
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            h4, p, div {
+                background-color: rgba(0, 0, 0, 0.150);
+                padding: 2px;
+            }
+
+            p {
+                background-color: rgba(0, 0, 0, 0.100);
+            }
+
+            div {
+                background-color: rgba(0, 0, 0, 0.050);
+
+                span {
+                    color: rgba(0, 0, 0, 0.500);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

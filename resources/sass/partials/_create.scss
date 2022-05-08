@@ -1,0 +1,72 @@
+.create-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-wrapper {
+        width: calc((100% / 12) * 4);
+
+        textarea {
+            height: 250px;
+            width: 100%;
+            margin-top: 3px;
+            outline: none;
+            padding: 2px 5px;
+            resize: none;
+        }
+
+        label, input {
+            display: block;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.500);
+            font-size: small;
+            width: 100%;
+            outline: none;
+        }
+
+        label {
+            margin-top: 5px;
+        }
+
+        input {
+            margin-top: 3px;
+            color: black;
+            font-size: smaller;
+            padding: 2px 5px;
+        }
+
+        #buttonSbmt {
+            width: auto;
+            color: white;
+            margin-top: 25px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.button {
+    color: white;
+    font-size: smaller;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 182, 97, 0.493);
+    display: inline-block;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        list-style-type: none;
+        font-size: 11px;
+        color: rgba(0, 0, 0, 0.500);
+
+        li {
+            margin-top: 5px;
+        }
+    }
+}

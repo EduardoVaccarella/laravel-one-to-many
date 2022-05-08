@@ -17,9 +17,9 @@ class PostSeeder extends Seeder
         for ($i=0; $i < 100; $i++) { 
             $newPost = new Post();
 
-            $newPost->title = $faker->words(7, true);
+            $newPost->title = $faker->words(4, true);
             $newPost->slug = Str::slug( $newPost->title ); 
-            $newPost->content = $faker->paragraphs(10, true);
+            $newPost->content = $faker->paragraphs(4, true);
 
             $newPost->save();
         }
