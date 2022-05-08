@@ -1,0 +1,24 @@
+.create-wrapper {
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 0px;
+    background-color: rgba(0, 0, 0, 0.100);;
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .button {
+        color: white;
+        font-size: smaller;
+        margin-top: 5px;
+        padding: 5px 10px;
+        border: 1px solid black;
+        background-color: rgba(0, 182, 97, 0.493);
+        cursor: pointer;
+    }
+}

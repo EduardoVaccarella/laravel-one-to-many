@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('createBtn')
+    @include('admin.partials.createBtn')
+@endsection
+
 @section('content')
     <div class="main">
         @foreach ($posts as $post)
@@ -14,9 +18,20 @@
                     </p>
 
                     <div>
-                        <span>
-                            delete
-                        </span>
+                        <div class="btnWrapper">
+                            <a href="{{ route('admin.posts.edit', $post->id) }}">
+                                <span class="editBtn">
+                                    Edit
+                                </span>
+                            </a>
+                            <form action="{{ route('admin.posts.destroy', $post->id) }}" method="post">
+                                @csrf
+            
+                                @method('DELETE')
+            
+                                <input type="submit" value="Delete" class="editBtn">
+                            </form>
+                        </div>
                     </div>
                 </a>
             </div>

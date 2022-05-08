@@ -71,6 +71,10 @@
                 </div>
             </div>
         </nav>
+        
+        <section>
+            @yield('createBtn')
+        </section>
 
         <main class="py-4">
             @yield('content')
