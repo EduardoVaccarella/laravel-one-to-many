@@ -17,6 +17,13 @@
         
                 <label for="content">Content</label>
                 <textarea type="text" name="content">{{ $post->content }}</textarea>
+
+                <select class="form-select" aria-label="Default select example" name="category_id">
+                    <option value="{{ $post->category_id }}" selected>prova</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
         
                 <input type="submit" value="Edita" id="buttonSbmt" class="button">
 

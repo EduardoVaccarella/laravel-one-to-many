@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -44,16 +45,14 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            'category_id' => 'nullable|exists:categories.id'
+            'category_id' => 'required'
         ]);
 
         $data = $request->all();
 
-        $slug = Post::getUniqueSlug( $data['title']);
-
         $newPost = new Post;
         $newPost->fill( $data );
-        $newPost->slug = $slug;
+        $newPost->slug = Str::of($data['title'])->slug('-');
 
         $newPost->save();
 
@@ -79,7 +78,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('admin.posts.edit', compact('post'));
+        $categories = Category::all();
+
+        return view('admin.posts.edit', compact('post'), compact('categories'));
     }
 
     /**

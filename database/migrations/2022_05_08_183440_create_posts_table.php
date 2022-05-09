@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title', 255);
             $table->string('slug', 255)->nullable();
             $table->longText('content');
+            $table->foreignId('category_id')->constrained();
             $table->string('cover')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->timestamps();
