@@ -15,6 +15,13 @@
         
                 <label for="description">Content</label>
                 <textarea type="text" name="content"></textarea>
+
+                <select class="form-select" aria-label="Default select example" name="category_id">
+                    <option selected>Category</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                  </select>
         
                 <input type="submit" value="Invia" id="buttonSbmt" class="button">
 
